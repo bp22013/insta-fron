@@ -4,7 +4,7 @@ import axios from "axios";
 function App() {
     const [userId, setUserId] = useState("");
     const [userInfo, setUserInfo] = useState(null);
-    const url = "https://insta-sc-7r18.onrender.com/";
+    const url = "https://insta-sc-7r18.onrender.com";
 
     const handleChange = (event) => {
         setUserId(event.target.value);
@@ -13,7 +13,7 @@ function App() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post(url, { user_id: userId }, { withCredentials: true });
+            const response = await axios.post(url, { user_id: userId } );
             setUserInfo(response.data);
         } catch (error) {
             console.error("Error fetching user info:", error);
@@ -45,3 +45,4 @@ function App() {
 }
 
 export default App;
+
