@@ -4,7 +4,7 @@ import axios from "axios";
 function App() {
     const [userId, setUserId] = useState("");
     const [userInfo, setUserInfo] = useState(null);
-    const url = "https://insta-sc-7r18.onrender.com";
+    const url = "https://insta-sc-7r18.onrender.com/";
 
     const handleChange = (event) => {
         setUserId(event.target.value);
